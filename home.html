@@ -9,19 +9,49 @@
       }
 
       body {
-        /* margin: 20px 30px 40px 50px; */
+        padding: 20px;
+        margin: 20px;
         background-color: pink;
       }
 
       div {
-        margin: 5px 5px;
-        height: 150px;
         width: 150px;
-        background-color: whitesmoke;
+        padding: 10px;
+        border: 2px solid black;
+      }
+      #first {
+        background-color: orange;
+        width: 150px;
+        height: 150px;
+      }
+      #second {
+        background-color: teal;
+        width: 100px;
+        height: 100px;
+      }
+      #third {
+        background-color: blue;
+        width: 50px;
+        height: 50px;
+      }
+      #fourth {
+        background-color: red;
+        width: 25px;
+        height: 25px;
       }
     </style>
   </head>
   <body>
-    <div></div>
+    <div id="first">
+      <div id="second">
+        <div id="third">
+          <div id="fourth"></div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
+
+<!-- 
+  3.5 에서 마진 충돌을 설명
+ -->
