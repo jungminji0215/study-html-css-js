@@ -1,0 +1,14 @@
+.box {
+  width: 200px;
+  padding: 50px;
+  border: 50px solid red;
+  margin: 20px;
+}
+
+.green {
+  border-color: green;
+}
+
+.blue {
+  border-color: blue;
+}
