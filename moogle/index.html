@@ -14,27 +14,27 @@
   <body>
     <!-- 뭔가 영역 같은 것을 나눌 때 div 태그를 무조건 쓴다! -->
     <!-- 머리 -->
-    <div>
-      <a href="#">Gmail</a>
-      <a href="#">Images</a>
+    <div class="navbar">
+      <a href="#" class="nav-item">Gmail</a>
+      <a href="#" class="nav-item">Images</a>
       <!-- CDN : content delivery network 
       남이 만들어 둔 것을 가져다가 쓴다.-->
       <i class="fa-solid fa-bars"></i>
     </div>
 
     <!-- 몸통 -->
-    <div>
+    <div class="main">
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png"
       />
-      <div>
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" />
-        <i class="fa-solid fa-microphone"></i>
+      <div class="input-area">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" class="input-box" />
+        <i class="fa-solid fa-microphone mic-icon"></i>
       </div>
-      <div>
-        <button>Boogle Search</button>
-        <button>I'm feeling lucky</button>
+      <div class="button-area">
+        <button class="button-style">Google Search</button>
+        <button class="button-style">I'm feeling lucky</button>
       </div>
       <div>
         Google offered in :
