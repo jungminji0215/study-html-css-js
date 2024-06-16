@@ -39,12 +39,14 @@ body {
 }
 
 .explain-box {
-  width: 400px;
+  width: 80%;
+  max-width: 400px;
   height: 200px;
   background-color: antiquewhite;
   margin: auto;
   padding: 10px;
+  text-align: center;
 
   position: relative;
-  top: 20px;
+  top: -60px;
 }
