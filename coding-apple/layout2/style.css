@@ -50,3 +50,57 @@ body {
   position: relative;
   top: -60px;
 }
+
+div,
+input,
+textarea {
+  box-sizing: border-box;
+}
+
+.form-background {
+  width: 100%;
+  padding: 30px;
+  background-color: black;
+}
+
+.form-white {
+  width: 80%;
+  max-width: 600px;
+  margin: auto;
+  background-color: white;
+  padding: 30px;
+}
+
+.w-50 {
+  width: 50%;
+  float: left;
+  padding: 10px;
+}
+
+.temp {
+  clear: both;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.email-area {
+  padding: 10px;
+}
+
+.main-info {
+  padding: 10px;
+}
+
+.message-area {
+  padding: 10px;
+}
+
+.button-area {
+  padding: 10px;
+}

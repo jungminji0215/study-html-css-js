@@ -24,8 +24,44 @@
       </p>
     </div>
 
-    <form>
-      <input type="file" />
-    </form>
+    <div class="form-background">
+      <div class="form-white">
+        <form>
+          <h class="main-info">contact us</h>
+
+          <div class="email-area">
+            <div>Your Email</div>
+            <input
+              class="form-input"
+              type="email"
+              placeholder="email@example.com"
+            />
+          </div>
+
+          <div class="w-50">
+            <div>First name</div>
+            <input class="form-input" type="text" />
+          </div>
+
+          <div class="w-50">
+            <div>Last name</div>
+            <input class="form-input" type="text" />
+          </div>
+
+          <!--float left 로 인한 현상 없애기-->
+          <div class="temp"></div>
+
+          <div class="message-area">
+            <div>Message</div>
+            <textarea class="form-input"></textarea>
+          </div>
+
+          <div class="button-area">
+            <input type="button" /> 구독하기
+            <input type="button" value="SEND" />
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
