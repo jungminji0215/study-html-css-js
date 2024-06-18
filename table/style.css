@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+}
+
+.table-background {
+  background-color: skyblue;
+  padding: 30px;
+}
+
+.cart-table {
+  background-color: white;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 800px;
+  /* margin: auto; */
+}
+
+.cart-table td,
+.cart-table th {
+  padding: 20px;
+  border-bottom: 1px solid gray;
+  /* text-align: left; */
+}
+
+.title {
+  font-weight: 1000;
+  padding-bottom: 5px;
+}
+
+.desc {
+  color: gray;
+}
+
+.table-long {
+  width: 300px;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.btn {
+  margin-top: 10px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  padding: 30px;
+}
+
+.btn:focus {
+  padding: 40px;
+}
+
+.btn:active {
+  padding: 50px;
+}
