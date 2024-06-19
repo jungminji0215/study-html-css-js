@@ -117,3 +117,64 @@ textarea {
 .flex-item {
   font-size: 50px;
 }
+
+.shop-bg {
+  background-color: #eee;
+  padding: 30px;
+}
+
+.shop-container {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: auto;
+}
+
+.shop-item {
+  width: 30%;
+  padding: 10px;
+}
+
+.shop-item img {
+  width: 100%;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 1s;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+.overlay-parent {
+  position: relative;
+}
+
+.overlay-wrap {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay2 {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+  color: white;
+  transition: all 1s;
+  margin-top: 100%;
+}
+
+.overlay-wrap:hover .overlay2 {
+  margin-top: 50%;
+  /* animation: slide-up 2s forwards; */
+}
