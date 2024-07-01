@@ -1,12 +1,10 @@
-document.getElementById("alert").addEventListener("click", () => alert());
 document
-  .getElementById("alert-close")
-  .addEventListener("click", () => alertClose());
+  .getElementById("alert-btn-id")
+  .addEventListener("click", () => alertButton("아이디를 입력하세요."));
+document
+  .getElementById("alert-btn-pw")
+  .addEventListener("click", () => alertButton("비번 입력하세요."));
 
-function alert() {
-  document.getElementById("alert-box").style.display = "block";
-}
-
-function alertClose() {
-  document.getElementById("alert-box").style.display = "none";
+function alertButton(message) {
+  document.getElementById("alert-message").innerHTML = message;
 }
