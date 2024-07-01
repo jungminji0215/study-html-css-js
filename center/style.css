@@ -1,20 +1,32 @@
-.parent {
-  width: 500px;
-  height: 500px;
+@import url("https://fonts.googleapis.com/css2?family=Stylish&display=swap");
+
+body {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+* {
+  font-family: "Stylish", serif;
+}
+
+.wrap {
+  margin: auto;
+}
+
+.mytitle {
+  height: 250px;
+  color: white;
+  background-color: green;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mytitle button {
   background-color: aqua;
-
-  text-align: center;
-}
-
-.child-div {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-}
-
-.child-span {
-  width: 100px;
-  height: 100px;
-
-  background-color: blue;
 }
