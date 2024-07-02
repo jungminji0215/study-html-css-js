@@ -1,6 +1,6 @@
 document
   .getElementById("nav-button")
-  .addEventListener("click", (event) => showSubNav(event));
+  .addEventListener("click", () => showSubNav());
 
 function showSubNav() {
   document.getElementById("sub-nav").style.display = "block";
