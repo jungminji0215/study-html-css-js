@@ -4,6 +4,10 @@
   font-family: "Gowun Dodum", sans-serif;
 }
 
+.wrap {
+  background-color: black;
+}
+
 h1 {
   margin: 0;
 }
@@ -35,7 +39,6 @@ body {
 }
 
 .header-nav {
-  background-color: black;
   width: 100%;
   display: flex;
   justify-content: space-between;
