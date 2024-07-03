@@ -27,18 +27,18 @@ function getRandomNumber() {
 let secondsLeft = 3;
 
 function renderRandomNumber(randomNumber) {
-  setTimeout(tick, 1000);
-
   document.getElementById("game-container").style.display = "block";
   document.getElementById("show-number").innerHTML = randomNumber;
+  setTimeout(countdown, 1000);
   document.getElementById("remain-time").innerHTML = secondsLeft;
 }
 
-function tick() {
+function countdown() {
   secondsLeft--;
   document.getElementById("remain-time").innerHTML = secondsLeft;
 
-  timerId = setTimeout(tick, 1000);
+  timerId = setTimeout(countdown, 1000);
+
   if (secondsLeft < 1) {
     document.getElementById("game-container").style.display = "none";
     clearTimeout(timerId);
@@ -47,6 +47,8 @@ function tick() {
 }
 
 function startGame() {
+  // TODO 게임 초기화
+
   // 랜덤 숫자 발행
   randomNumber = getRandomNumber();
   console.log(randomNumber);
