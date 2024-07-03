@@ -5,7 +5,6 @@ document
 document.getElementById("summit").addEventListener("click", () => getResult());
 
 let timerId;
-let secondsLeft = 3;
 let randomNumber;
 
 function getResult() {
@@ -25,32 +24,24 @@ function getRandomNumber() {
   return Math.floor(Math.random() * 9000) + 1000;
 }
 
+let secondsLeft = 3;
+
 function renderRandomNumber(randomNumber) {
+  setTimeout(tick, 1000);
+
   document.getElementById("game-container").style.display = "block";
   document.getElementById("show-number").innerHTML = randomNumber;
-}
-
-function getRemainTime() {
-  secondsLeft--;
-
-  if (secondsLeft < 0) {
-    clearInterval(timerId);
-  }
-}
-
-function renderRemainTime() {
   document.getElementById("remain-time").innerHTML = secondsLeft;
 }
 
-function startCheckTile() {
-  renderRemainTime();
+function tick() {
   secondsLeft--;
+  document.getElementById("remain-time").innerHTML = secondsLeft;
 
-  if (secondsLeft < 0) {
-    clearInterval(timerId);
-
-    // 3초 후에 숫자 사라지기
+  timerId = setTimeout(tick, 1000);
+  if (secondsLeft < 1) {
     document.getElementById("game-container").style.display = "none";
+    clearTimeout(timerId);
     secondsLeft = 3;
   }
 }
@@ -62,6 +53,4 @@ function startGame() {
 
   // 숫자 보여주기
   renderRandomNumber(randomNumber);
-
-  timerId = setInterval(startCheckTile, 1000);
 }

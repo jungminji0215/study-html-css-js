@@ -19,7 +19,6 @@ function tick() {
   countNumber--;
   timerId = setTimeout(tick, 1000);
   if (countNumber < 1) {
-    console.log("기회끝");
     clearTimeout(timerId);
     countNumber = 3;
   }
