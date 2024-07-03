@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Poor+Story&display=swap");
+
+* {
+  font-family: "Poor Story", system-ui;
+}
+
+.game-container-style {
+  display: flex;
+  flex-direction: column;
+}
+
+.game-container {
+  display: none;
+}
+
+.announcement {
+  display: none;
+}
