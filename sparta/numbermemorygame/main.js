@@ -30,10 +30,6 @@ function renderRandomNumber(randomNumber) {
   document.getElementById("show-number").innerHTML = randomNumber;
 }
 
-function hideGameRules() {
-  document.getElementById("game-rules").style.display = "none";
-}
-
 function getRemainTime() {
   secondsLeft--;
 
@@ -55,20 +51,14 @@ function startCheckTile() {
 
     // 3초 후에 숫자 사라지기
     document.getElementById("game-container").style.display = "none";
-    document.getElementById("announcement").style.display = "block";
     secondsLeft = 3;
   }
 }
 
 function startGame() {
-  document.getElementById("announcement").style.display = "none";
-
   // 랜덤 숫자 발행
   randomNumber = getRandomNumber();
   console.log(randomNumber);
-
-  // 게임 규칙 숨기기
-  hideGameRules();
 
   // 숫자 보여주기
   renderRandomNumber(randomNumber);
