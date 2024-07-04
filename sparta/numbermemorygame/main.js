@@ -6,13 +6,19 @@ document.getElementById("summit").addEventListener("click", () => getResult());
 
 let timerId;
 let randomNumber;
+let secondsLeft = 3;
+
+function initGame() {
+  secondsLeft = 3;
+  document.getElementById("result").innerHTML = "";
+}
 
 function getResult() {
   let inputNumber = document.getElementById("input-number").value;
   if (isCorrect(inputNumber)) {
-    console.log("정답입니다.");
+    document.getElementById("result").innerHTML = "정답입니다.";
   } else {
-    console.log("틀렸습니다.");
+    document.getElementById("result").innerHTML = "틀렸습니다.";
   }
 }
 
@@ -23,8 +29,6 @@ function isCorrect(inputNumber) {
 function getRandomNumber() {
   return Math.floor(Math.random() * 9000) + 1000;
 }
-
-let secondsLeft = 3;
 
 function renderRandomNumber(randomNumber) {
   document.getElementById("game-container").style.display = "block";
@@ -42,12 +46,12 @@ function countdown() {
   if (secondsLeft < 1) {
     document.getElementById("game-container").style.display = "none";
     clearTimeout(timerId);
-    secondsLeft = 3;
   }
 }
 
 function startGame() {
-  // TODO 게임 초기화
+  // 게임 초기화
+  initGame();
 
   // 랜덤 숫자 발행
   randomNumber = getRandomNumber();

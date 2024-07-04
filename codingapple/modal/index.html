@@ -8,14 +8,23 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div>
-      <div class="black-bg">
-        <div class="white-bg">
-          <h4>로그인하세요</h4>
-          <button class="btn btn-danger" id="close">닫기</button>
-        </div>
+    <div class="black-bg">
+      <div class="white-bg">
+        <h4>로그인하세요</h4>
+
+        <form action="success.html">
+          <div>
+            <input type="text" class="form-control" />
+          </div>
+          <div>
+            <input type="password" class="form-control" />
+          </div>
+          <button type="submit" id="summit">전송</button>
+          <button type="button" id="close">닫기</button>
+        </form>
       </div>
     </div>
+
     <button id="click-modal">모달창</button>
 
     <script src="main.js"></script>

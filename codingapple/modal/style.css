@@ -9,10 +9,10 @@ body {
   position: fixed;
   z-index: 5;
   display: none;
-  padding: 20px;
 }
 .white-bg {
   background: pink;
   border-radius: 5px;
   padding: 20px;
+  margin: 100px;
 }
