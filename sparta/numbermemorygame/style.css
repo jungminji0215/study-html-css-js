@@ -4,9 +4,17 @@
   font-family: "Poor Story", system-ui;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .game-container-style {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .game-container {
