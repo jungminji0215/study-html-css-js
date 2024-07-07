@@ -1,11 +1,14 @@
-document
-  .getElementById("click-modal")
-  .addEventListener("click", () => showModal());
+document.getElementById("login").addEventListener("click", () => showModal());
+document.getElementById("close").addEventListener("click", () => closeModal());
 
 document.getElementById("summit").addEventListener("click", () => checkValid());
 
+function closeModal() {
+  document.querySelector(".black-bg").classList.remove("show-modal");
+}
+
 function showModal() {
-  document.getElementsByClassName("black-bg")[0].style.display = "block";
+  document.querySelector(".black-bg").classList.add("show-modal");
 }
 
 function checkValid() {
