@@ -5,6 +5,23 @@ document
   .getElementById("send")
   .addEventListener("click", (event) => checkValid(event));
 
+document.querySelector(".navbar-toggler").addEventListener("click", toggleMode);
+
+function toggleMode() {
+  console.log("클릭");
+  if (
+    window.getComputedStyle(document.querySelector(".badge")).color == "white"
+  ) {
+    document.querySelector(".badge").classList.add("bg-dark");
+  }
+
+  if (
+    window.getComputedStyle(document.querySelector(".badge")).color == "white"
+  ) {
+    document.querySelector(".badge").classList.remove("bg-dark");
+  }
+}
+
 function closeModal() {
   document.querySelector(".black-bg").classList.remove("show-modal");
 }

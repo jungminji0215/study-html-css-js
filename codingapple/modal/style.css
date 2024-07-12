@@ -12,6 +12,7 @@ body {
   opacity: 0;
   transition: all 1s;
 }
+
 .white-bg {
   background: pink;
   border-radius: 5px;
@@ -22,4 +23,8 @@ body {
 .show-modal {
   visibility: visible;
   opacity: 1;
+}
+
+.bg-dark {
+  color: black;
 }
