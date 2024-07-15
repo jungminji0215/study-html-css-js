@@ -1,0 +1,16 @@
+.slid-container {
+  width: 300vw;
+  display: flex;
+  justify-content: center;
+  /* transform: translateX(-100vw); */
+  transition: all 1s;
+}
+
+.slid-box {
+  width: 100vw;
+}
+
+img {
+  width: 100%;
+  height: 500px;
+}
