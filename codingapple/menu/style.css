@@ -3,13 +3,16 @@ body {
 }
 
 .navbar-area {
+  position: fixed;
+  width: 100%;
   padding: 20px;
   background-color: antiquewhite;
+  z-index: 5;
 }
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 ul {
@@ -28,4 +31,13 @@ ul {
 
 .sub-nav {
   display: none;
+}
+
+.big {
+  height: 2000px;
+  background-color: aqua;
+}
+
+.navbar-brand {
+  font-size: 50px;
 }
