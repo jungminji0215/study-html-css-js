@@ -8,12 +8,11 @@
       .scroll-Box {
         width: 300px;
         height: 200px;
-        overflow: auto;
+        overflow: scroll;
         border: 1px solid black;
-        padding: 10px;
       }
       .content {
-        height: 600px;
+        height: 700px;
       }
     </style>
   </head>
@@ -31,7 +30,7 @@
         const clientHeight = document.querySelector(".scroll-Box").clientHeight;
 
         if (scrollTop + clientHeight >= scrollHeight) {
-          alert("맨 아래에 도달했습니다.");
+          alert("맨 아래에 도달!");
         }
       });
     </script>

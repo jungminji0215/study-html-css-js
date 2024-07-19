@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .header {
+        background-color: green;
+        width: 100%;
+        height: 50px;
+      }
+
+      .main {
+        width: 100%;
+        height: 2000px;
+        font-size: 50px;
+      }
+
+      .scroll-top-btn {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        width: 100px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header"></div>
+    <div class="main" style="background-color: blanchedalmond">
+      스크롤 내려갑니다.
+    </div>
+    <div class="main" style="background-color: pink">스크롤 내려갑니다.</div>
+    <button class="scroll-top-btn" id="scroll-top-btn">위로가기</button>
+
+    <script>
+      document
+        .getElementById("scroll-top-btn")
+        .addEventListener("click", scrollToTop);
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
+  </body>
+</html>
