@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .bar {
+      position: fixed;
+      background-color: orange;
+      height: 30px;
+    }
+
+    .box {
+      font-size: 40px;
+      height: 3000px;
+    }
+  </style>
+  <body>
+    <div class="bar"></div>
+    <div class="box"></div>
+
+    <script>
+      const bar = document.querySelector(".bar");
+
+      window.addEventListener("scroll", function () {
+        // scrollTop은 현재 스크롤된 픽셀 수를 가져옵니다.
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+        // 는 전체 문서 높이에서 뷰포트 높이를 뺀 값을 계산하여 스크롤 가능한 전체 높이를 구합니다.
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+        //현재 스크롤된 위치를 전체 스크롤 가능 높이에 대한 퍼센트로 변환합니다.
+        const scrollPercentage = (scrollTop / scrollHeight) * 100;
+
+        // 해당 % 만큼 진척도 막대바를 늘리고 줄이고
+        bar.style.width = scrollPercentage + "%";
+      });
+    </script>
+  </body>
+</html>
