@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        padding: 0;
+        list-style-type: none;
+      }
+
+      .list {
+        display: flex;
+      }
+
+      .tab-button {
+        padding: 10px 20px;
+        border-bottom: 1px solid gray;
+        color: grey;
+      }
+
+      .orange {
+        border-top: 5px solid orange;
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid white;
+        border-left: 1px solid #ccc;
+        color: black;
+        margin-top: -5px;
+      }
+
+      .tab-content {
+        display: none;
+        padding: 10px;
+      }
+
+      .show {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <ul class="list">
+        <li class="tab-button" id="products">Products</li>
+        <li class="tab-button orange" id="information">Information</li>
+        <li class="tab-button">Shipping</li>
+      </ul>
+
+      <div class="tab-content">
+        <p>상품설명입니다. Product</p>
+      </div>
+      <div class="tab-content show">
+        <p>스펙설명입니다. Information</p>
+      </div>
+      <div class="tab-content">
+        <p>배송정보입니다. Shipping</p>
+      </div>
+    </div>
+
+    <script>
+      //   document.querySelector(".tab-button").addEventListener("click", (e) => {
+      //     const orange = document.querySelectorAll(".orange");
+      //     const show = document.querySelectorAll(".show");
+
+      //     orange.forEach((element) => {
+      //       element.classList.remove("orange");
+      //     });
+
+      //     show.forEach((element) => {
+      //       element.classList.remove("show");
+      //     });
+
+      //     document.querySelector(".tab-content").classList.add("show");
+      //     document.querySelector(".tab-button").classList.add("orange");
+      //   });
+
+      document.querySelectorAll(".tab-button").forEach((element, index) => {
+        element.addEventListener("click", () => {
+          const orange = document.querySelectorAll(".orange");
+          const show = document.querySelectorAll(".show");
+
+          orange.forEach((element) => {
+            element.classList.remove("orange");
+          });
+
+          show.forEach((element) => {
+            element.classList.remove("show");
+          });
+
+          element.addEventListener("click", () => {
+            document
+              .querySelectorAll(".tab-content")
+              [index].classList.add("show");
+            document
+              .querySelectorAll(".tab-button")
+              [index].classList.add("orange");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
