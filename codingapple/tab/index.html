@@ -60,43 +60,48 @@
     </div>
 
     <script>
-      //   document.querySelector(".tab-button").addEventListener("click", (e) => {
-      //     const orange = document.querySelectorAll(".orange");
-      //     const show = document.querySelectorAll(".show");
+      //   document.querySelectorAll(".tab-button").forEach((element, index) => {
+      //     element.addEventListener("click", () => {
+      //       const orange = document.querySelectorAll(".orange");
+      //       const show = document.querySelectorAll(".show");
 
-      //     orange.forEach((element) => {
-      //       element.classList.remove("orange");
+      //       orange.forEach((element) => {
+      //         element.classList.remove("orange");
+      //       });
+
+      //       show.forEach((element) => {
+      //         element.classList.remove("show");
+      //       });
+
+      //       element.addEventListener("click", () => {
+      //         document
+      //           .querySelectorAll(".tab-content")
+      //           [index].classList.add("show");
+      //         document
+      //           .querySelectorAll(".tab-button")
+      //           [index].classList.add("orange");
+      //       });
       //     });
-
-      //     show.forEach((element) => {
-      //       element.classList.remove("show");
-      //     });
-
-      //     document.querySelector(".tab-content").classList.add("show");
-      //     document.querySelector(".tab-button").classList.add("orange");
       //   });
 
-      document.querySelectorAll(".tab-button").forEach((element, index) => {
-        element.addEventListener("click", () => {
-          const orange = document.querySelectorAll(".orange");
-          const show = document.querySelectorAll(".show");
+      // 모든 탭 버튼과 탭 컨텐츠를 선택합니다.
+      const tabButtons = document.querySelectorAll(".tab-button");
+      const tabContents = document.querySelectorAll(".tab-content");
 
-          orange.forEach((element) => {
-            element.classList.remove("orange");
+      // 모든 탭 버튼에 대해 클릭 이벤트 리스너를 추가합니다.
+      tabButtons.forEach((button, index) => {
+        button.addEventListener("click", () => {
+          // 모든 탭 컨텐츠의 'show' 클래스를 제거하고 해당 탭 컨텐츠에만 'show' 클래스를 추가합니다.
+          tabContents.forEach((content) => {
+            content.classList.remove("show");
           });
+          tabContents[index].classList.add("show");
 
-          show.forEach((element) => {
-            element.classList.remove("show");
+          // 모든 탭 버튼의 'orange' 클래스를 제거하고 클릭된 버튼에만 'orange' 클래스를 추가합니다.
+          tabButtons.forEach((btn) => {
+            btn.classList.remove("orange");
           });
-
-          element.addEventListener("click", () => {
-            document
-              .querySelectorAll(".tab-content")
-              [index].classList.add("show");
-            document
-              .querySelectorAll(".tab-button")
-              [index].classList.add("orange");
-          });
+          button.classList.add("orange");
         });
       });
     </script>
