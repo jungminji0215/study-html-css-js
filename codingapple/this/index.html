@@ -7,17 +7,27 @@
     <title>Document</title>
   </head>
   <body>
+    <button id="버튼">버튼</button>
     <script>
-      let 오브젝트6 = {
-        name: "민지",
-        함수() {
-          console.log(this);
-        },
-      };
+      // function 기계() {
+      //   this.이름 = "kim";
+      // }
 
-      오브젝트6.함수();
+      // let 오브젝트 = new 기계();
+      // console.log(오브젝트);
 
-      // 즉, this 는 그 함수를 가지고 있는 오브젝트를 뜻한다!!
+      document.getElementById("버튼").addEventListener("click", function (e) {
+        let 오브젝트 = {
+          data: [1, 2, 3],
+          함수: function () {
+            오브젝트.data.forEach(() => {
+              console.log(this);
+            });
+          },
+        };
+
+        오브젝트.함수();
+      });
     </script>
   </body>
 </html>

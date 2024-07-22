@@ -1,4 +1,3 @@
-const solution = (numbers) =>
-  numbers.reduce((accumulator, currentValue) => {
-    return accumulator + currentValue;
-  }, 0) / numbers.length;
+function solution(absolutes, signs) {
+  return absolutes.reduce((acc, val, i) => acc + val * (signs[i] ? 1 : -1), 0);
+}
