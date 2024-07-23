@@ -1,0 +1,21 @@
+.profile {
+  display: block;
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+}
+
+.content {
+  display: block;
+  text-align: center;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  background-color: rebeccapurple;
+  margin: auto;
+}
