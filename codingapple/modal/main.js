@@ -1,5 +1,8 @@
 document.getElementById("login").addEventListener("click", () => showModal());
 document.getElementById("close").addEventListener("click", () => closeModal());
+document
+  .querySelector(".black-bg")
+  .addEventListener("click", (e) => closeModal(e));
 
 document
   .getElementById("send")
@@ -8,7 +11,6 @@ document
 document.querySelector(".navbar-toggler").addEventListener("click", toggleMode);
 
 function toggleMode() {
-  console.log("클릭");
   if (
     window.getComputedStyle(document.querySelector(".badge")).color == "white"
   ) {
@@ -22,8 +24,13 @@ function toggleMode() {
   }
 }
 
-function closeModal() {
-  document.querySelector(".black-bg").classList.remove("show-modal");
+function closeModal(e) {
+  console.log(e.target);
+  console.log(document.querySelector(".black-bg"));
+
+  if (e.target === document.querySelector(".black-bg")) {
+    document.querySelector(".black-bg").classList.remove("show-modal");
+  }
 }
 
 function showModal() {

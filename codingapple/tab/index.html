@@ -43,9 +43,9 @@
   <body>
     <div class="container mt-5">
       <ul class="list">
-        <li class="tab-button" id="products">Products</li>
-        <li class="tab-button orange" id="information">Information</li>
-        <li class="tab-button">Shipping</li>
+        <li class="tab-button" data-id="0">Products</li>
+        <li class="tab-button orange" data-id="1">Information</li>
+        <li class="tab-button" data-id="2">Shipping</li>
       </ul>
 
       <div class="tab-content">
@@ -60,51 +60,35 @@
     </div>
 
     <script>
-      //   document.querySelectorAll(".tab-button").forEach((element, index) => {
-      //     element.addEventListener("click", () => {
-      //       const orange = document.querySelectorAll(".orange");
-      //       const show = document.querySelectorAll(".show");
-
-      //       orange.forEach((element) => {
-      //         element.classList.remove("orange");
-      //       });
-
-      //       show.forEach((element) => {
-      //         element.classList.remove("show");
-      //       });
-
-      //       element.addEventListener("click", () => {
-      //         document
-      //           .querySelectorAll(".tab-content")
-      //           [index].classList.add("show");
-      //         document
-      //           .querySelectorAll(".tab-button")
-      //           [index].classList.add("orange");
-      //       });
-      //     });
-      //   });
-
-      // 모든 탭 버튼과 탭 컨텐츠를 선택합니다.
       const tabButtons = document.querySelectorAll(".tab-button");
       const tabContents = document.querySelectorAll(".tab-content");
-
-      // 모든 탭 버튼에 대해 클릭 이벤트 리스너를 추가합니다.
-      tabButtons.forEach((button, index) => {
-        console.log("sdfsfsd");
-        button.addEventListener("click", () => {
-          // 모든 탭 컨텐츠의 'show' 클래스를 제거하고 해당 탭 컨텐츠에만 'show' 클래스를 추가합니다.
-          tabContents.forEach((content) => {
-            content.classList.remove("show");
-          });
-          tabContents[index].classList.add("show");
-
-          // 모든 탭 버튼의 'orange' 클래스를 제거하고 클릭된 버튼에만 'orange' 클래스를 추가합니다.
-          tabButtons.forEach((btn) => {
-            btn.classList.remove("orange");
-          });
-          button.classList.add("orange");
-        });
+      document.querySelector(".list").addEventListener("click", (e) => {
+        changeTab(tabButtons[e.target.dataset.id], e.target.dataset.id);
       });
+
+      // tabButtons.forEach((button, index) => {
+      //   button.addEventListener("click", () => {
+      //     changeTab(button, index);
+      //   });
+      // });
+
+      function changeTab(button, index) {
+        // 모든 탭 컨텐츠의 'show' 클래스를 제거하고
+        tabContents.forEach((content) => {
+          content.classList.remove("show");
+        });
+
+        // 해당 탭 컨텐츠에만 'show' 클래스를 추가
+        tabContents[index].classList.add("show");
+
+        // 모든 탭 버튼의 'orange' 클래스를 제거하고 클릭된 버튼에만 'orange' 클래스를 추가
+        tabButtons.forEach((btn) => {
+          btn.classList.remove("orange");
+        });
+
+        // 클릭된 버튼에만 'orange' 클래스를 추가
+        button.classList.add("orange");
+      }
     </script>
   </body>
 </html>
