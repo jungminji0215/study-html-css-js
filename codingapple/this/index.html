@@ -9,24 +9,10 @@
   <body>
     <button id="버튼">버튼</button>
     <script>
-      // function 기계() {
-      //   this.이름 = "kim";
-      // }
-
-      // let 오브젝트 = new 기계();
-      // console.log(오브젝트);
-
-      document.getElementById("버튼").addEventListener("click", function (e) {
-        let 오브젝트 = {
-          data: [1, 2, 3],
-          함수: function () {
-            오브젝트.data.forEach(() => {
-              console.log(this);
-            });
-          },
-        };
-
-        오브젝트.함수();
+      document.getElementById("버튼").addEventListener("click", function () {
+        setTimeout(() => {
+          console.log(this.innerHTML);
+        }, 1000);
       });
     </script>
   </body>

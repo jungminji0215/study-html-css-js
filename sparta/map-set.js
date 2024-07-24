@@ -13,6 +13,7 @@ for (const entry of myMap.entries()) {
 myMap.size
 */
 
+/*
 const mySet = new Set();
 mySet.add("정민지");
 mySet.add("강보경");
@@ -24,3 +25,4 @@ console.log(mySet.has("김민지"));
 for (const value of mySet.values()) {
   console.log(value);
 }
+*/
