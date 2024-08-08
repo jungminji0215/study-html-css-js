@@ -25,9 +25,6 @@ function toggleMode() {
 }
 
 function closeModal(e) {
-  console.log(e.target);
-  console.log(document.querySelector(".black-bg"));
-
   if (e.target === document.querySelector(".black-bg")) {
     document.querySelector(".black-bg").classList.remove("show-modal");
   }
